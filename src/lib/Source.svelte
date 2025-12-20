@@ -1,3 +1,27 @@
+<script>
+    import { onMount } from "svelte";
+    import { EditorView, basicSetup } from "codemirror";
+    import { oneDark } from "@codemirror/theme-one-dark";
+
+    import { javascript } from "@codemirror/lang-javascript"; // тут устанавливается нужный язык
+
+    let container;  // здесь хранится div.editor из-за bind:this
+    // extensionsSettings для доп. настроек
+    let extensionsSettings = [ 
+        basicSetup,
+        javascript(),
+        oneDark,
+    ];
+    
+    onMount(() => {
+        let editor = new EditorView({
+            doc: "console.log('Hello CodeMirror');",  // значение по умолчанию
+            extensions: extensionsSettings,
+            parent: container  // CodeMirror требует DOM
+        });
+    });
+</script>
+
 <div class = "box">
     <div bind:this={container} class="editor"></div>
 </div>
