@@ -1,5 +1,5 @@
 <div class = "box">
-    <p> Сюда пихать логику отображения кода. </p>
+    <div bind:this={container} class="editor"></div>
 </div>
 
 <style>
