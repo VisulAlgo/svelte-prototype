@@ -1,7 +1,8 @@
 <script>
-    import Source from "$lib/Source.svelte";
-    import Stack from "$lib/Stack.svelte";
+    import Source from "$lib/components/Source.svelte";
+    import Stack from "$lib/components/Stack.svelte";
 </script>
+
 <header>
     <div class="algName">
         <h1>
@@ -18,7 +19,7 @@
     </div>
 </header>
 <div class="container">
-    <Source/>
+    <Source file="removeAt.cs"/>
     <Stack/>
 </div>
 
@@ -59,15 +60,6 @@ header {
     justify-content: space-between;
     height: 80vh;
     overflow: hidden;
-}
-
-.container * {
-    background-color: brown;
-    height: 100%;
-    width: 100%;
-    margin: 5px;
-    display: inline-block;
-    border-radius: 10px;
 }
 
 </style>
