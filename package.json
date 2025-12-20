@@ -18,6 +18,8 @@
 		"vite": "^7.2.6"
 	},
 	"dependencies": {
-		"@shikijs/transformers": "^3.20.0"
+		"@friendofsvelte/mermaid": "^0.0.4",
+		"@shikijs/transformers": "^3.20.0",
+		"mermaid": "^11.12.2"
 	}
 }
