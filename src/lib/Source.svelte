@@ -11,4 +11,10 @@
     background-color: #a4a4a4;
     border-radius: 10px;
 }
+
+.editor {
+    width: 100%;
+    height: 100%;
+}
+
 </style>
