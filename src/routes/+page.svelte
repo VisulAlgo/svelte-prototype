@@ -1,64 +1,38 @@
 <script>
-    import Source from "$lib/components/Source.svelte";
-    import Stack from "$lib/components/Stack.svelte";
+    import Header from "$lib/components/Header.svelte";
+    import Code from "$lib/components/Code.svelte";
+    import Browser from "$lib/components/Browser.svelte";
 </script>
 
-<header>
-    <div class="algName">
-        <h1>
-            Удаление элемента из массива
-        </h1>
-    </div>
-    <div class="other">
-        <button class="debug">
-            Проверить код
-        </button>
-        <button class="next">
-            Перейти к следующему блоку
-        </button>
-    </div>
-</header>
-<div class="container">
-    <Source file="removeAt.cs"/>
-    <Stack file="removeAt.mmd"/>
-</div>
+<Header title="Удаление элемента из массива"/>
+
+<main>
+    <section><Code/></section>
+    <section><Browser/></section>
+</main>
 
 <style>
-header {
-    height: 10%;
+:global(body) {
+    margin: 0;
+    background-color: #0f1117;
+    color: #e6edf3;
+}
+:global(*) {
+    box-sizing: border-box;
+}
+main {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    height: calc(100vh - 70px);
+}
+
+section {
+    background: #161b22;
+    border-radius: 12px;
     display: flex;
-    justify-content: space-between;
-    padding-left: 5px;
-    padding-right: 5%;
-}
-
-.debug {
-    background-color: blueviolet;
-}
-
-.algName {
-    background-color:blue;
-    width: 40%;
-    text-align: center;
-}
-
-.other {
-    display: flex;
-    justify-content: space-between;
-}
-
-.debug {
-    margin-right: 100px;
-}
-
-.next {
-    background-color: cadetblue;
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    height: 80vh;
+    flex-direction: column;
     overflow: hidden;
 }
 
