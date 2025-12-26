@@ -24,6 +24,13 @@ header {
     border-bottom: 1px solid #21262d;
     background: #0f1117;
 }
+
+.top-left{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .top-left h1 {
     font-size: 26px;
     font-weight: 400;
