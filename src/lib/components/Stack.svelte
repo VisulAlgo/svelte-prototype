@@ -3,7 +3,6 @@
     import { page } from "$app/stores";
     let { file } = $props();
     const raw = $page.data.diagrams?.[file];
-    console.log(raw);
 </script>
 
 <div class="box">
